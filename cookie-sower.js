@@ -1,1 +1,1 @@
-Game.Notify("Hello world!");
+Game.Popup("Hello world!");
