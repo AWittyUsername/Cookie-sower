@@ -32,7 +32,7 @@ if(Game.isMinigameReady(Game.Objects['Farm'])) {
             icon: 2,
             desc: '-',
             descFunc: function () {
-                return 'Instantly fill as many empty garden tiles as you can afford with the selected seed. <span class="red">Be careful when <using></using> this tool! Some seeds are VERY expensive.</span><div class=\"line\"></div>';
+                return 'Instantly fill as many empty garden tiles as you can afford with the selected seed. <span class="red">Be careful when using this tool! Some seeds are VERY expensive.</span><div class=\"line\"></div>';
             },
             func: function () {
                 CS.plantAll();
