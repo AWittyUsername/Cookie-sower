@@ -13,7 +13,6 @@ if(Game.isMinigameReady(Game.Objects['Farm'])) {
     CS.plantAll = function () {
         if (CS.Garden.seedSelected >= 0) {
             var plantId = CS.Garden.seedSelected;
-            Game.Popup(CS.Garden.plantsById[plantId].name);
             for (var x = 0; x < 6; x++) {
                 for (var y = 0; y < 6; y++) {
                     if (CS.Garden.isTileUnlocked(x, y) && CS.Garden.canPlant(CS.Garden.plantsById[plantId]) && (CS.Garden.plot[y][x][0] == 0)) {
