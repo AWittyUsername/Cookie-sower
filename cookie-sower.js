@@ -15,7 +15,7 @@ if(Game.isMinigameReady(Game.Objects['Farm'])) {
             var plantId = CS.Garden.seedSelected;
             for (var x = 0; x < 6; x++) {
                 for (var y = 0; y < 6; y++) {
-                    if (CS.Garden.isTileUnlocked(x, y) && CS.Garden.canPlant(CS.Garden.plantsById[plantId]) && (CS.Garden.plot[y][x][0] == 0)) {
+                    if (CS.Garden.isTileUnlocked(x, y) && CS.Garden.canPlant(CS.Garden.plantsById[plantId]) && ((CS.Garden.plot[y][x][0] == 0)||Game.keys[16])) {
                         CS.Garden.plot[y][x] = [plantId + 1, 0];
                         Game.Spend(CS.Garden.getCost(CS.Garden.plantsById[plantId]));
                     }
@@ -32,7 +32,7 @@ if(Game.isMinigameReady(Game.Objects['Farm'])) {
             icon: 2,
             desc: '-',
             descFunc: function () {
-                return 'Instantly fill as many empty garden tiles as you can afford with the selected seed. <span class="red">Be careful when using this tool! Some seeds are VERY expensive.</span><div class=\"line\"></div>';
+                return 'Instantly fill as many empty garden tiles as you can afford with the selected seed. <span class="red">Be careful when using this tool! Some seeds are VERY expensive.</span><div class=\"line\"></div>Shift+click to force all tiles to be planted.';
             },
             func: function () {
                 CS.plantAll();
